@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'smartnotes.urls'
+ROOT_URLCONF = 'smartnotes.smartnotes.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'smartnotes.wsgi.application'
+WSGI_APPLICATION = 'smartnotes.smartnotes.wsgi.application'
 
 
 # Database

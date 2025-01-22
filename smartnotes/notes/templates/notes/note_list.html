@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Notes List Page</title>
+    </head>
+    <body>
+        <h1>These are the notes list</h1>
+        <ul>
+            {% for note in notes %}
+                <li>{{note.title}}</li>
+            {%endfor%}
+        </ul>
+    </body>
+</html>

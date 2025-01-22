@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Questions List</title>
+    </head>
+    <body>     
+        {% if question_list %}
+            <fieldset>
+            <ul>
+                {% for question in question_list %}
+                <legend><li><h1><a style='color:green' href='/polls/{{question.id}}/'>{{question.question}}</a></h1></li></legend><br/>
+                {% endfor %}
+            </ul>
+            </fieldset>
+        {%else%}
+        <h1>There are no questions to display!</h1>
+        {% endif%}
+
+        <form action="{% url 'polls:index'%}" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend><h1>{{ question.question }}</h1></legend>
+                {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                {% for choice in question.choice_set.all %}
+                    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+                {% endfor %}
+            </fieldset>
+            <input type="submit" value="Vote">
+            </form>
+    </body>
+</html>

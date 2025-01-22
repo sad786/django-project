@@ -1,9 +1,9 @@
 {
   "version": 2,
   "builds":[
-    {"src": "smartnotes/asgi.py","use":"@vercel/python"}
+    {"src": "smartnotes/smartnotes/asgi.py","use":"@vercel/python"}
   ],
   "routes":[
-    {"src": "/(.*)","dest": "smartnotes/asgi.py"}
+    {"src": "/(.*)","dest": "smartnotes/smartnotes/asgi.py"}
   ]
 }

@@ -29,6 +29,8 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
 
+#this will allow HTTPS request to enter this app
+
 
 # Application definition
 

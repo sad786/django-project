@@ -5,5 +5,8 @@
   ],
   "routes":[
     {"src": "/(.*)","dest": "smartnotes/smartnotes/asgi.py"}
-  ]
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "smartnotes.smartnotes.settings",
+  },
 }

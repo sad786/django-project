@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'smartnotes.home/',
-    'smartnotes.notes/',
-    'smartnotes.polls/',
+    'smartnotes.home',
+    'smartnotes.notes',
+    'smartnotes.polls',
 ]
 
 MIDDLEWARE = [

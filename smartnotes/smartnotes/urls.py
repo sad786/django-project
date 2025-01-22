@@ -18,8 +18,8 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('smartnotes.home.urls')),
+    path('', admin.site.urls),
+    path('admin/',include('smartnotes.home.urls')),
     path('smart/',include('smartnotes.notes.urls')),
     path('polls/',include('smartnotes.polls.urls'))
 ]

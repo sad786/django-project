@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds":[
+    {"src": "smartnote/manage.py","use":"@vercel/python"}
+  ],
+  "routes":[
+    {"src": "/(.*)","dest": "smartnote/manage.py"}
+  ]
+}

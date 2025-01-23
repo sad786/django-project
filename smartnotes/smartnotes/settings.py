@@ -100,11 +100,11 @@ DATABASES = {
 
         'USER': 'postgres', 
 
-        'PASSWORD': 'oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL',
+        'PASSWORD': '',
 
-        'HOST': 'junction.proxy.rlwy.net', 
+        'HOST': '', 
 
-        'PORT': '42465', 
+        'PORT': '', 
 
     },
     #'DATABASE_URL': 'postgresql://postgres:oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL@postgres.railway.internal:5432/railway',

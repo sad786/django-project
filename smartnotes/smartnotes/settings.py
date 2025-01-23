@@ -18,6 +18,12 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# to store static files
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -25,9 +31,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fki83prx&#yi%-x)u9_vs7g1(0rez8^7w_yuwn&d!-a!!$v_27'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+#DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.vercel.app,localhost').split(',')
+DEBUG = True
+
+#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.vercel.app,localhost').split(',')
+
+ALLOWED_HOSTS = []
 
 #this will allow HTTPS request to enter this app
 

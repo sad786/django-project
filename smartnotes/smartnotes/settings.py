@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'smartnotes.home',
-    'smartnotes.notes',
-    'smartnotes.polls',
+    'home',
+    'notes',
+    'polls',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'smartnotes.smartnotes.urls'
+ROOT_URLCONF = 'smartnotes.urls'
 
 TEMPLATES = [
     {
@@ -74,14 +74,31 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'smartnotes.smartnotes.wsgi.application'
+WSGI_APPLICATION = 'smartnotes.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('postgresql://postgres:oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL@postgres.railway.internal:5432/railway'))
+    'default': {
+        'DATABASE_URL': 'postgresql://postgres:oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL@postgres.railway.internal:5432/railway',
+        
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'railway', 
+
+        'USER': 'postgres', 
+
+        'PASSWORD': 'oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL',
+
+        'HOST': 'junction.proxy.rlwy.net', 
+
+        'PORT': '42465', 
+
+    },
+    #'DATABASE_URL': 'postgresql://postgres:oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL@postgres.railway.internal:5432/railway',
+    #'default': dj_database_url.config(default=os.environ.get('postgresql://postgres:oeXGHYUhFJMrDwRJMVOwOobEOXomCSiL@postgres.railway.internal:5432/railway'))
 }
 
 
